@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>USER_INFO</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+</head>
+<body>
+<div class="container text-center">
+    <h1 class="text-muted">USER_INFO</h1>
+    <form th:method="POST" th:action="@{/users}" th:object="${user}">
+        <label for="Id">id</label>
+        <input type="text" th:field="*{id}" id="Id" readonly/>
+        <br><br>
+        <label for="nameId">name</label>
+        <input type="text" th:field="*{name}" id="nameId"/>
+        <br><br>
+        <label for="lastnameId">lastname</label>
+        <input type="text" th:field="*{lastname}" id="lastnameId"/>
+        <br><br>
+        <label for="emailId">email</label>
+        <input type="text" th:field="*{email}" id="emailId"/>
+        <br><br>
+        <input type="submit" value="OK"/>
+    </form>
+    <br>
+</div>
+</body>
+</html>
